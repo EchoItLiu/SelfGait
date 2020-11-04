@@ -1,0 +1,58 @@
+#network:
+#  name: resnet18
+
+  # Specify a folder containing a pre-trained model to fine-tune. If training from scratch, pass None.
+#  fine_tune_from: 'resnet-18_40-epochs'
+
+#  projection_head:
+#    mlp_hidden_size: 512
+#    projection_size: 128
+
+network:
+  hidden_dim: 128
+  lr: 1e-5
+  hard_or_full_trip: 'full'
+  batch_size: (8, 16)
+  restore_path:
+  restore_iter: 0
+  total_iter: 80000
+  margin: 0.2
+  num_workers: 0
+  frame_num: 30
+  model_name: 'GaitSet'
+  fine_tune_from: 'None'
+  projection_head:
+    mlp_hidden_size: 256
+    projection_size: 128
+
+data:
+  dataset_path: "/home/yqliu/Dataset/CASIA-B/silhouettes"
+  #dataset_path: "/home/yqliu/Dataset/oumvlp_pre/"
+  resolution: '64'
+  dataset: 'CASIA-B'
+  #dataset: 'OUMVLP'
+  f_length: 30
+  partition_rate: 0.8
+  #label_rate: 0.008
+  label_rate: 0.0
+  pid_num: 73
+  pid_shuffle: False
+
+data_transforms:
+  s: 1
+  input_shape: (96,96,3)
+
+trainer:
+  batch_size: (8, 16)
+  m: 0.996 # momentum update
+  checkpoint_interval: 5000
+  max_epochs: 40
+  num_workers: 4
+
+optimizer:
+  params:
+    lr: 0.03
+    momentum: 0.9
+    weight_decay: 0.0004
+    
+CUDA_VISIBLE_DEVICES: '1,0'
