@@ -85,6 +85,7 @@ CUDA_VISIBLE_DEVICES: '1,0'
 
 ## Evaluation
 
+### Quantitative Experiment
 We measure the performance of SelfGait on two benchmark datasets that are CASIA64 and OUMVLP.
 
 <div align="center">
@@ -101,4 +102,22 @@ We measure the performance of SelfGait on two benchmark datasets that are CASIA6
 <p align="center">
   Table 2: Averaged rank-1 accuracies on OU-MVLP, excluding identical-view cases.
 </p>
+
+### Qualitative Experiment
+
+<div align="center">
+  <img src="https://github.com/EchoItLiu/SelfGait/blob/main/exp/EX_CL.svg">
+</div>
+<p align="center">
+  Table 1: The CL rank-1 accuracy.
+</p>
+
+
+<div align="center">
+  <img src="https://github.com/EchoItLiu/SelfGait/blob/main/exp/EX_BG.svg">
+</div>
+<p align="center">
+  Table 2: The BG rank-1 accuracy.
+</p>
+
 
