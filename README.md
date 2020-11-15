@@ -1,8 +1,12 @@
 # PyTorch-BYOL
 ### PyTorch implementation of [Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning](https://arxiv.org/abs/2006.07733).
 
-![Image of Yaktocat](SelfGait/exp/EX_CL.png)
-
+<div align="center">
+  <img src="https://github.com/EchoItLiu/SelfGait/blob/main/exp/SelfGait_framework.png">
+</div>
+<p align="center">
+  Figure 1: The framework of SelfGait
+</p>
 ## Installation
 
 Clone the repository and run
