@@ -1,4 +1,4 @@
-# PyTorch-BYOL
+# SelfGait
 ### PyTorch implementation of [Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning](https://arxiv.org/abs/2006.07733).
 
 <div align="center">
@@ -83,9 +83,9 @@ CUDA_VISIBLE_DEVICES: '1,0'
 
 ```
 
-## Feature Evaluation
+## Evaluation
 
-We measure the quality of the learned representations by linear separability.
+We measure the performance of SelfGait on two benchmark datasets that are CASIA64 and OUMVLP.
 
 During training, BYOL learns features using the STL10 ```train+unsupervised``` set and evaluates in the held-out ```test``` set.
 
